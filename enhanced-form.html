@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Registration & Information</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px; }
+        header, main, section, footer { margin-bottom: 20px; padding: 10px; border-radius: 5px; }
+        header { text-align: center; background-color: #f0f0f0; }
+        .content-section { background-color: #e9e9e9; }
+        .form-section { background-color: #d9d9d9; }
+        fieldset { border: 1px solid #ccc; padding: 20px; margin-bottom: 20px; }
+        legend { font-weight: bold; font-size: 1.2em; padding: 0 10px; }
+        label, input, textarea, select { display: block; margin-bottom: 10px; }
+        input[type="submit"] { padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mastering HTML5 Workshop</h1>
+        <p>Enhance your web development skills with our comprehensive workshop.</p>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h2>Workshop Highlights</h2>
+            <ul>
+                <li>In-depth HTML5 form validation without JavaScript.</li>
+                <li>Best practices for web accessibility.</li>
+                <li>Hands-on projects and examples.</li>
+                <li>Expert-led Q&A sessions.</li>
+            </ul>
+
+            <h3>How to Register</h3>
+            <ol>
+                <li>Review the schedule and pricing table below.</li>
+                <li>Complete the registration form on this page.</li>
+                <li>Submit your payment details.</li>
+                <li>Receive your confirmation email.</li>
+            </ol>
+        </section>
+
+        <section class="content-section">
+            <h2>Workshop Schedule & Pricing</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Session</th>
+                        <th>Topic</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Session 1</td>
+                        <td>HTML5 Content & Media</td>
+                        <td rowspan="2">$150 USD</td>
+                    </tr>
+                    <tr>
+                        <td>Session 2</td>
+                        <td>Mastering HTML5 Forms</td>
+                    </tr>
+                    <tr>
+                        <td>Full Workshop</td>
+                        <td>Both Sessions</td>
+                        <td>$250 USD</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Meet the Instructor</h2>
+            <img src="https://via.placeholder.com/300x200" alt="A headshot of the workshop instructor, Jane Doe.">
+        </section>
+
+        <section class="form-section">
+            <h2>Workshop Registration Form</h2>
+
+            <form action="/submit_registration" method="post" autocomplete="on">
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required autocomplete="name" placeholder="John Doe">
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="john.doe@example.com">
+
+                    <label for="password">Password (for account):</label>
+                    <input type="password" id="password" name="password" minlength="8" required>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Workshop Details</legend>
+
+                    <label for="workshopSession">Choose a session:</label>
+                    <select id="workshopSession" name="workshopSession" required>
+                        <option value="" disabled selected>-- Select an Option --</option>
+                        <option value="session1">Session 1: HTML5 Content & Media ($150)</option>
+                        <option value="session2">Session 2: Mastering HTML5 Forms ($150)</option>
+                        <option value="full">Full Workshop ($250)</option>
+                    </select>
+
+                    <label for="attendees">Number of Attendees:</label>
+                    <input type="number" id="attendees" name="attendees" min="1" max="10" value="1" required>
+
+                    <label for="registrationDate">Registration Date:</label>
+                    <input type="date" id="registrationDate" name="registrationDate" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Optional Information</legend>
+
+                    <label for="phone">Phone Number (e.g., 123-456-7890):</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Please enter a phone number in the format 123-456-7890">
+
+                    <label for="referralSource">How did you hear about us?</label>
+                    <input type="text" id="referralSource" name="referralSource" value="Online Search" readonly>
+
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">I would like to receive the newsletter.</label>
+                </fieldset>
+
+                <input type="submit" value="Register Now">
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Workshop Company. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
